@@ -1,0 +1,155 @@
+:root {
+  --bg-primary: #0d1117;
+  --bg-card: #161b22;
+  --bg-card-hover: #1c2330;
+  --border-color: #30363d;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --accent-green: #3fb950;
+  --accent-red: #f85149;
+  --accent-blue: #58a6ff;
+  --accent-yellow: #d29922;
+  --accent-purple: #bc8cff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+/* ── Navbar ─────────────────────────────────── */
+#main-navbar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* ── Cards ──────────────────────────────────── */
+.dark-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.dark-card .card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.65rem 1rem;
+}
+
+.card-title-sm {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Metric Cards ────────────────────────────── */
+.metric-card .card-body {
+  padding: 1rem 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+/* ── Signal Colors ──────────────────────────── */
+.signal-long  { color: var(--accent-green) !important; }
+.signal-short { color: var(--accent-red) !important; }
+.signal-exit  { color: var(--accent-yellow) !important; }
+.signal-hold  { color: var(--accent-blue) !important; }
+.signal-none  { color: var(--text-muted) !important; }
+
+.regime-mean  { background: rgba(63, 185, 80, 0.2); color: var(--accent-green); }
+.regime-trend { background: rgba(248, 81, 73, 0.2); color: var(--accent-red); }
+
+/* ── Forms ──────────────────────────────────── */
+.form-control, .form-select {
+  background: #21262d;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+.form-control:focus, .form-select:focus {
+  background: #21262d;
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.15);
+}
+
+/* ── Tables ─────────────────────────────────── */
+.table-dark {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: var(--bg-card-hover);
+  font-size: 0.8rem;
+}
+.table thead th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-color: var(--border-color);
+  font-weight: 500;
+}
+.table td { border-color: var(--border-color); vertical-align: middle; }
+
+/* ── PnL colors ─────────────────────────────── */
+.pnl-positive { color: var(--accent-green); }
+.pnl-negative { color: var(--accent-red); }
+
+/* ── Badges ─────────────────────────────────── */
+.badge { font-size: 0.7rem; letter-spacing: 0.04em; }
+
+/* ── Buttons ────────────────────────────────── */
+.btn-sm { font-size: 0.8rem; }
+.btn-success { background-color: var(--accent-green); border-color: var(--accent-green); }
+.btn-info { background-color: #1f6feb; border-color: #1f6feb; }
+
+/* ── Toast ──────────────────────────────────── */
+.toast {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+}
+
+/* ── Loading overlay ────────────────────────── */
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 17, 23, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 576px) {
+  .metric-value { font-size: 1.2rem; }
+}
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
