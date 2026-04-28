@@ -1,0 +1,12 @@
+flask
+flask-cors
+flask-limiter
+python-dotenv
+requests
+SQLAlchemy
+yfinance
+scipy
+numpy
+pandas
+pykalman
+gunicorn

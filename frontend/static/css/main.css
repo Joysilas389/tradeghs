@@ -1,0 +1,214 @@
+:root {
+  --bg-primary: #0d1117;
+  --bg-card: #161b22;
+  --bg-card-hover: #1c2330;
+  --border-color: #30363d;
+  --text-primary: #ffffff;
+  --text-muted: #e6edf3;
+  --accent-green: #3fb950;
+  --accent-red: #f85149;
+  --accent-blue: #58a6ff;
+  --accent-yellow: #d29922;
+  --accent-purple: #bc8cff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+#main-navbar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.dark-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.dark-card .card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.65rem 1rem;
+}
+
+.card-title-sm {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #e6edf3;
+}
+
+.metric-card .card-body {
+  padding: 1rem 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e6edf3;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.signal-long  { color: #3fb950 !important; }
+.signal-short { color: #f85149 !important; }
+.signal-exit  { color: #d29922 !important; }
+.signal-hold  { color: #58a6ff !important; }
+.signal-none  { color: #adbac7 !important; }
+
+.regime-mean  { background: rgba(63, 185, 80, 0.25); color: #3fb950; font-weight: 700; }
+.regime-trend { background: rgba(248, 81, 73, 0.25); color: #f85149; font-weight: 700; }
+
+.form-control, .form-select {
+  background: #21262d;
+  border: 1px solid #444c56;
+  color: #ffffff !important;
+  font-size: 0.85rem;
+}
+
+.form-control:focus, .form-select:focus {
+  background: #21262d;
+  border-color: var(--accent-blue);
+  color: #ffffff !important;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+}
+
+.form-label {
+  color: #adbac7 !important;
+  font-weight: 600;
+}
+
+.form-check-label {
+  color: #adbac7 !important;
+}
+
+.table-dark {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: var(--bg-card-hover);
+  font-size: 0.8rem;
+  color: #ffffff !important;
+}
+
+.table thead th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #adbac7 !important;
+  border-color: var(--border-color);
+  font-weight: 700;
+}
+
+.table td {
+  border-color: var(--border-color);
+  vertical-align: middle;
+  color: #ffffff !important;
+}
+
+.pnl-positive { color: #3fb950 !important; font-weight: 700; }
+.pnl-negative { color: #f85149 !important; font-weight: 700; }
+
+.badge { font-size: 0.72rem; letter-spacing: 0.04em; font-weight: 700; }
+
+.btn-sm { font-size: 0.8rem; font-weight: 600; }
+
+.text-muted {
+  color: #adbac7 !important;
+}
+
+.small, small {
+  color: #adbac7 !important;
+}
+
+/* Pair validation metrics text */
+#pair-metrics-row .text-muted {
+  color: #adbac7 !important;
+  font-weight: 600;
+}
+
+#pair-metrics-row .fw-semibold {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Backtest metrics */
+#bt-coint-info {
+  color: #adbac7 !important;
+  font-size: 0.82rem;
+}
+
+#bt-coint-info strong {
+  color: #ffffff !important;
+}
+
+.toast {
+  background: #1c2330;
+  border: 1px solid var(--border-color);
+  color: #ffffff;
+  font-size: 0.82rem;
+}
+
+.toast-body {
+  color: #ffffff !important;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+
+/* GHS rates display */
+#ghs-rate-display {
+  color: #adbac7 !important;
+  font-size: 0.8rem;
+}
+
+/* Capital display */
+#capital-display {
+  color: #3fb950 !important;
+  font-weight: 700;
+}
+
+/* Backtest result card text */
+.fw-bold {
+  color: #ffffff !important;
+}
+
+/* No trades text */
+.text-center.text-muted {
+  color: #adbac7 !important;
+}
+
+/* Visibility fixes */
+.metric-label { color: #e6edf3 !important; }
+.card-title-sm { color: #e6edf3 !important; }
+.text-muted { color: #c9d1d9 !important; }
+#pair-metrics-row .small { color: #e6edf3 !important; }
+#bt-coint-info { color: #e6edf3 !important; }
+#bt-coint-info strong { color: #ffffff !important; }
+.table thead th { color: #e6edf3 !important; }
+.form-label { color: #e6edf3 !important; }
+.navbar-text { color: #e6edf3 !important; }
