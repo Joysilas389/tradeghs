@@ -5,7 +5,7 @@ import re
 from datetime import datetime
 from functools import wraps
 
-from flask import Flask, jsonify, request, abort, send_from_directory
+from flask import Flask, jsonify, request, abort, send_from_directory, render_template
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -79,7 +79,7 @@ def create_app() -> Flask:
 
     @app.route("/")
     def index():
-        return send_from_directory("../frontend/templates", "index.html")
+        return render_template("index.html")
 
     @app.route("/api/health")
     def health():
